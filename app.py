@@ -15,7 +15,10 @@ def main():
   st.markdown(html_temp,unsafe_allow_html=True)
   num1 = st.number_input("Number 1")
   num2 = st.number_input("Number 2")
-  result = num1 / num2
+  if (num2 == 0):
+    result= ("Cannot divide by 0")
+  else:
+    result = num1 / num2
   st.success('The output is {}'.format(result))
   if st.button("Made By"):
       st.text("Sundar")
